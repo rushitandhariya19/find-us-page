@@ -1,7 +1,8 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, sans-serif;
-  background-attachment: fixed; /* Fixes the background */
+  /* background-attachment: fixed; Fixes the background */
+  padding: 5px;
 }
 
 .container {
@@ -16,6 +17,7 @@ body {
   backdrop-filter: blur(5px);
   max-width: 400px; /* lock mobile width on laptop */
   margin: auto;
+  border-radius: 10px;
 }
 
 .glass-card {
@@ -24,17 +26,17 @@ body {
   border-radius: 20px;
   padding: 30px 20px;
   text-align: center;
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(2px);
   box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
   color: #fff;
   margin-bottom: 30px;
 }
 
 .glass-card .logo {
-  width: 100px;
+  width: auto;
   height: 100px;
-  /* object-fit: cover; */
-  border-radius: 50%;
+  object-fit: cover;
+  border-radius: 15px;
   border: 3px solid #fff;
   margin-bottom: 15px;
 }
@@ -206,3 +208,4 @@ footer {
 .close:hover {
   color: #bbb;
 }
+
