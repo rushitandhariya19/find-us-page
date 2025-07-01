@@ -44,3 +44,25 @@ document.querySelectorAll('.gallery-grid img').forEach(img => {
 
 closeBtn.onclick = () => { modal.style.display = 'none'; };
 window.onclick = event => { if (event.target == modal) modal.style.display = 'none'; };
+
+// Populate About Us section
+document.getElementById('aboutTitle').textContent = siteConfig.aboutUs.title;
+document.getElementById('aboutTag').textContent = siteConfig.aboutUs.tag;
+document.getElementById('aboutDescription').textContent = siteConfig.aboutUs.description;
+
+// Populate style options
+const styleOptionsContainer = document.getElementById('styleOptions');
+styleOptionsContainer.innerHTML = siteConfig.aboutUs.styles
+  .map(style => `<div class="style-pill">${style}</div>`)
+  .join('');
+
+// Populate benefits list
+const benefitsList = document.getElementById('benefitsList');
+benefitsList.innerHTML = siteConfig.aboutUs.benefits
+  .map(benefit => `<li><i class="fas fa-check-circle"></i> ${benefit}</li>`)
+  .join('');
+
+// Populate CTA section
+document.getElementById('ctaText').innerHTML = siteConfig.aboutUs.cta.text;
+document.getElementById('urgencyNote').textContent = siteConfig.aboutUs.cta.urgency;
+document.getElementById('ctaButtonText').textContent = siteConfig.aboutUs.cta.buttonText;

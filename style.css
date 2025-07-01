@@ -1,34 +1,46 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, sans-serif;
-  /* background-attachment: fixed; Fixes the background */
-  padding: 5px;
+  overflow-x: hidden;
 }
 
 .container {
-  background: url('./assets/bg.jpeg');
+  /* background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 50%, #fad0c4 51%, #ff9a9e 100%); */
+  background: url(./assets/bg5.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
-  /* background-attachment: fixed; */
+  /* background-size: 400% 400%; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   padding: 40px 20px;
-  backdrop-filter: blur(5px);
-  max-width: 400px; /* lock mobile width on laptop */
+  max-width: 400px;
   margin: auto;
-  border-radius: 10px;
+  animation: gradientMove 15s ease infinite;
+}
+
+h1{
+    text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 20px;
   padding: 30px 20px;
   text-align: center;
-  backdrop-filter: blur(2px);
-  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
-  color: #fff;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 32px rgba(255, 105, 180, 0.3);
+  color: #333;
   margin-bottom: 30px;
 }
 
@@ -45,11 +57,14 @@ body {
   margin: 0;
   font-size: 24px;
   letter-spacing: 1px;
+  color: #d23c77;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
 }
 
 .glass-card p {
   margin-top: 8px;
   font-size: 14px;
+  color: #333;
 }
 
 .actions {
@@ -57,18 +72,18 @@ body {
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .action-btn {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  color: #fff;
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #d23c77;
   text-decoration: none;
   padding: 10px;
   border-radius: 10px;
   backdrop-filter: blur(10px);
-  box-shadow: 0 4px 20px rgba(31, 38, 135, 0.1);
+  box-shadow: 0 4px 20px rgba(255, 105, 180, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -84,7 +99,125 @@ body {
 
 .action-btn:hover {
   transform: scale(1.05);
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Navratri Offer Section */
+.navratri-offer {
+  text-align: center;
+}
+
+.festive-banner h2 {
+  color: #d23c77;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.festive-tag {
+  background: linear-gradient(45deg, #d23c77, #ff6b6b);
+  color: white;
+  padding: 6px 15px;
+  border-radius: 20px;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 15px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.offer-description {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.style-options {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.style-pill {
+  background: rgba(210, 60, 119, 0.1);
+  color: #d23c77;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 13px;
+  border: 1px solid rgba(210, 60, 119, 0.3);
+}
+
+.benefits {
+  text-align: left;
+  margin: 25px 0;
+}
+
+.benefits h3 {
+  color: #d23c77;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.benefits-list {
+  padding-left: 20px;
+  list-style-type: none;
+}
+
+.benefits-list li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.benefits-list i {
+  color: #d23c77;
+  margin-right: 10px;
+  font-size: 16px;
+  margin-top: 2px;
+}
+
+.cta-box {
+  margin-top: 25px;
+}
+
+.urgency-note {
+  color: #d23c77;
+  font-weight: bold;
+  margin: 15px 0;
+  font-size: 15px;
+}
+
+.cta-button {
+  background: linear-gradient(45deg, #d23c77, #ff6b6b);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(210, 60, 119, 0.3);
+  margin-top: 10px;
+  width: 100%;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(210, 60, 119, 0.4);
+}
+
+.cta-button i {
+  margin-right: 8px;
 }
 
 .gallery {
@@ -100,7 +233,7 @@ body {
 
 .gallery h2 {
   text-align: center;
-  color: #fff;
+  color: #333;
   margin-bottom: 20px;
   font-size: 22px;
 }
@@ -117,24 +250,29 @@ body {
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  border: 2px solid rgba(255,255,255,0.3);
 }
 
 .gallery-grid img:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 20px #fff;
+  box-shadow: 0 0 20px rgba(255,255,255,0.8);
 }
 
 footer {
   text-align: center;
-  color: #fff;
+  color: #555;
   margin-top: auto;
-  font-size: 18px;
+  font-size: 16px;
   padding: 20px 0;
+}
+
+footer strong {
+  color: #d23c77;
 }
 
 @media (max-width: 480px) {
   .container {
-    max-width: 100%; /* use full width on small mobiles */
+    max-width: 100%;
     padding: 30px 15px;
   }
 
@@ -151,7 +289,7 @@ footer {
   }
 
   .actions {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller phones */
+    grid-template-columns: repeat(2, 1fr);
     gap: 8px;
   }
 
@@ -162,6 +300,18 @@ footer {
 
   .action-btn i {
     font-size: 16px;
+  }
+
+  .festive-banner h2 {
+    font-size: 18px;
+  }
+
+  .offer-description {
+    font-size: 13px;
+  }
+
+  .benefits-list li {
+    font-size: 12px;
   }
 
   .gallery h2 {
@@ -203,9 +353,9 @@ footer {
   font-size: 35px;
   font-weight: bold;
   cursor: pointer;
+  text-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
 
 .close:hover {
-  color: #bbb;
+  color: #ffb6c1;
 }
-

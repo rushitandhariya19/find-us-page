@@ -1,31 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Preksha Beautique</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Preksha Boutique</title>
   <link rel="stylesheet" href="style.css" />
   <script src="config.js" defer></script>
   <script src="script.js" defer></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
 
 <body>
   <div class="container">
     <header class="glass-card">
       <img src="" alt="Logo" class="logo" />
-      <h1></h1>
-      <p></p>
+      <h1>Preksha Boutique</h1>
+      <p>Celebrating the Spirit of Navratri ✨</p>
     </header>
 
     <div class="actions"></div>
+
+    <h1>About Us</h1>
+    <section class="navratri-offer glass-card">
+      <div class="festive-banner">
+        <h2 id="aboutTitle"></h2>
+        <div class="festive-tag" id="aboutTag"></div>
+      </div>
+
+      <p class="offer-description" id="aboutDescription"></p>
+
+      <div class="style-options" id="styleOptions"></div>
+
+      <div class="benefits">
+        <h3>💫 Why Choose Preksha Boutique?</h3>
+        <ul class="benefits-list" id="benefitsList"></ul>
+      </div>
+
+      <div class="cta-box">
+        <p id="ctaText"></p>
+        <div class="urgency-note" id="urgencyNote"></div>
+        <button class="cta-button">
+          <i class="fas fa-calendar-check"></i> <span id="ctaButtonText"></span>
+        </button>
+      </div>
+    </section>
 
     <section class="gallery" id="gallerySection">
       <h2>Gallery</h2>
       <div class="gallery-grid"></div>
     </section>
 
-    <footer>Developed by <strong></strong></footer>
+    <footer>Developed by <strong>JDK GROUP</strong></footer>
   </div>
 
   <!-- Modal Lightbox -->
@@ -34,4 +60,5 @@
     <img class="modal-content" id="modalImg">
   </div>
 </body>
+
 </html>
